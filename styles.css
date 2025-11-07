@@ -41,7 +41,13 @@ body {
 .navbar nav a:hover, .navbar nav a.active { color: var(--accent); background: rgba(56,189,248,0.04); }
 
 /* HERO / ABOUT */
-.hero { padding-top:170px; padding-bottom:60px; }
+body {
+  scroll-padding-top: 100px; /* يجعل التنقل بالرابط (#home) يأخذ في الحسبان ارتفاع الـnavbar */
+  }
+.hero {
+ padding-top: calc(120px + 2vh);
+ padding-bottom: 60px;
+}
 .hero-wrap {
   display:grid; grid-template-columns:320px 1fr; gap:28px; align-items:center; padding:40px 20px;
 }
