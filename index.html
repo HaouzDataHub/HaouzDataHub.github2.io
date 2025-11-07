@@ -16,6 +16,25 @@
   <script src="script.js"></script>
   </body>
   </html>
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      // التمرير للأسفل → أخفِ الـnavbar
+      navbar.classList.add('hide');
+    } else {
+      // التمرير للأعلى → أظهره
+      navbar.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+
 <body>
   <!-- NAVBAR -->
   <header class="navbar glass" id="navbar">
