@@ -163,6 +163,30 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   </script>
+  <script>
+  // === PAGE LOADER ===
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => loader.classList.add('hide'), 700); // اختفاء بعد 0.7 ثانية
+  });
+
+  // === THEME TOGGLE ===
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    toggleBtn.textContent = isLight ? '🌞' : '🌙';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+
+  // حفظ الوضع بعد إعادة تحميل الصفحة
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+    toggleBtn.textContent = '🌞';
+  }
+</script>
+
 
 </body>
 </html>
