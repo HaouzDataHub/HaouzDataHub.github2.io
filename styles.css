@@ -104,6 +104,8 @@ body {
 /* animations */
 .fade-in { opacity:0; transform:translateY(10px); animation:fadeIn 0.9s ease-out forwards; }
 @keyframes fadeIn { to { opacity:1; transform:none; } }
+.fade-in.appear { opacity: 1; transform: none; transition: all 0.8s ease-out; }
+
 
 /* responsive */
 @media (max-width:980px) {
