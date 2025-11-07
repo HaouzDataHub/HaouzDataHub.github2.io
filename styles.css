@@ -1,195 +1,454 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Data analyst portfolio of Hamza Haouzmani — transforming complex data into clear insights using R, SQL, Tableau, and Excel.">
-  <meta name="author" content="Hamza Haouzmani" />
-  <title>Hamza Haouzmani | HaouzDataHub | Data Analyst Portfolio</title>
-  <link rel="icon" href="images/profil.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
+:root {
+  --bg-dark: #0e1116;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --text-light: #e6eef6;
+  --muted-gray: #9fb0c2;
+  --accent: #38bdf8;
+  --font-main: 'Inter', sans-serif;
+  --font-alt: 'Oswald', sans-serif;
+}
 
-<body>
-  <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" title="Back to top">⬆</button>
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body{height:100%}
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(180deg,#07101a 0%, var(--bg-dark) 100%);
+  color: var(--text-light);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  overflow-x:hidden;
+}
 
-  <!-- NAVBAR -->
-  <header class="navbar glass" id="navbar">
-    <div class="logo">
-      <img src="images/profil.jpg" alt="Hamza Haouzmani logo" />
-      <h1>HaouzDataHub</h1>
-    </div>
-    <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#certs">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+/* CONTAINER */
+.container { max-width:1100px; margin:0 auto; padding:22px; }
 
-  <!-- THEME TOGGLE BUTTON -->
-  <button id="theme-toggle" title="Toggle theme">🌙</button>
+/* NAVBAR */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 22px;
+  position:fixed;
+  top:10px;
+  left:12px;
+  right:12px;
+  z-index:60;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(2,6,23,0.55);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.navbar .logo { display:flex; align-items:center; gap:12px; }
+.navbar .logo img { width:44px; height:44px; border-radius:8px; object-fit:cover; }
+.navbar .logo h1 { font-family:var(--font-alt); font-weight:600; font-size:18px; color:var(--text-light); margin:0; }
 
-  <!-- PAGE LOADER -->
-  <div id="loader">
-    <div class="spinner"></div>
-    <p>Loading Portfolio...</p>
-  </div>
+.navbar nav a {
+  color:var(--muted-gray);
+  text-decoration:none;
+  margin-left:14px;
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+  transition: all .18s;
+}
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--accent);
+  background: rgba(56,189,248,0.04);
+}
 
-  <!-- HERO SECTION -->
-  <main class="hero" id="home">
-    <div class="hero-wrap container">
-      <!-- Profile -->
-      <div class="profile-area">
-        <div class="profile-frame small">
-          <img src="images/profil.jpg" alt="Hamza Haouzmani profile" class="profile-large">
-        </div>
-      </div>
+/* NAVBAR HIDE ON SCROLL */
+.navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 
-      <!-- About -->
-      <div class="about-area">
-        <h2 class="hero-title">Turning complex data into <span class="accent">clear actionable insights</span></h2>
+/* HERO / ABOUT */
+body { scroll-padding-top: 100px; }
+.hero {
+  padding-top: 180px;
+  padding-bottom: 60px;
+}
+.hero-wrap {
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:28px;
+  align-items:center;
+  padding:40px 20px;
+}
+.profile-area { display:flex; align-items:center; justify-content:center; }
+.profile-frame {
+  width:240px;
+  height:240px;
+  border-radius:999px;
+  padding:8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 18px 60px rgba(8,20,30,0.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform .34s, box-shadow .34s;
+}
+.profile-frame:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 30px 90px rgba(8,20,30,0.75);
+}
+.profile-large {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:999px;
+  display:block;
+  box-shadow:0 8px 30px rgba(0,0,0,0.35);
+  transition: transform .34s;
+}
 
-        <!-- Modern skill badges -->
-        <div class="skills-list">
-          <span class="skill-badge">R</span>
-          <span class="skill-badge">SQL</span>
-          <span class="skill-badge">Google Sheets</span>
-          <span class="skill-badge">Tableau</span>
-          <span class="skill-badge">Excel</span>
-        </div>
+/* ABOUT TEXT */
+.hero-title {
+  font-family:var(--font-alt);
+  font-size:1.6rem;
+  font-weight:600;
+  color:#e8fbff;
+  margin-bottom:8px;
+}
+.hero-title .accent { color:var(--accent); }
+.about-text {
+  color:#d7e6ef;
+  font-size:0.98rem;
+  line-height:1.65;
+  margin-top:12px;
+  max-width:70ch;
+}
+.hero-actions {
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.btn-primary {
+  background:var(--accent);
+  color:#041027;
+  padding:10px 18px;
+  border-radius:28px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 10px 30px rgba(56,189,248,0.06);
+  transition: transform .18s;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow:0 20px 50px rgba(56,189,248,0.12);
+}
+.btn.ghost {
+  background:transparent;
+  color:var(--text-light);
+  border:1px solid rgba(255,255,255,0.04);
+  padding:10px 16px;
+  border-radius:20px;
+  text-decoration:none;
+}
 
-        <p class="about-text">
-          Hey everyone, I’m <strong>Hamza Haouzmani</strong>.<br>
-          My journey into data analysis began after managing my own construction business, which the pandemic disrupted.<br>
-          Driven by my passion for finance and business, I explored trading, learned to analyze market data, and discovered the power of analytical methods.<br>
-          I completed the <em>Google Data Analytics Certificate</em> on Coursera and now specialize in transforming data into business insights using R, SQL, Tableau, and Excel.
-        </p>
+/* INLINE LINKS */
+.inline-link {
+  color:var(--text-light);
+  text-decoration:underline;
+  text-underline-offset:4px;
+  transition: color .18s;
+}
+.inline-link:hover { color:var(--accent); }
 
-        <div class="hero-actions">
-          <a class="btn-primary" href="Cyclistic_bik_presentation_analysis_case_study.html">View My Work</a>
-          <a class="btn ghost" href="files/Hamza_Haouzmani_CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
-        </div>
+/* SECTIONS */
+.section {
+  padding:40px 20px;
+  max-width:1200px;
+  margin:28px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+.section h3,
+.section-title {
+  font-family:var(--font-alt);
+  font-size:1.6rem;
+  margin-bottom:12px;
+  text-align:center;
+  color:#bff0ff;
+}
 
-        <!-- Compact contact icons -->
-        <div class="contact-icons">
-          <a href="mailto:hamza@haouzmanianalytics.com" title="Email"><img src="icons/email.png" alt="Email icon"></a>
-          <a href="tel:+213550714859" title="Phone"><img src="icons/phone.png" alt="Phone icon"></a>
-          <a href="https://www.linkedin.com/in/hamza-haouzmani" target="_blank" title="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
-        </div>
-      </div>
-    </div>
-  </main>
+/* CERTS */
+.cert-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.cert-card {
+  background:var(--bg-glass);
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+  transition: transform .22s, box-shadow .22s;
+}
+.cert-card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  display:block;
+}
+.cert-card .cert-body { padding:12px; }
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow:0 26px 60px rgba(6,20,40,0.55);
+  border-color: rgba(56,189,248,0.08);
+}
 
-  <!-- CERTIFICATIONS -->
-  <section id="certs" class="section glass fade-in">
-    <h3>Certifications</h3>
-    <div class="cert-grid">
-      <article class="cert-card"><img src="images/google_data_analytics.jpg" alt="Google Data Analytics Certificate"><div class="cert-body"><h4>Google Data Analytics Professional Certificate</h4><p class="muted small">Practical training in data cleaning, visualization, R and SQL.</p><a class="btn-outline" href="https://coursera.org/share/41e6b6aac21396c35a189cec6f42ddfb" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/prepare_data_for_exploration.jpg" alt="Prepare Data for Exploration"><div class="cert-body"><h4>Prepare Data for Exploration</h4><p class="muted small">Organizing and protecting data for analysis.</p><a class="btn-outline" href="https://coursera.org/share/f24513981fe27ec0ed0b073b0ea11c89" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/process_data_from_dirty_to_clean.jpg" alt="Process Data from Dirty to Clean"><div class="cert-body"><h4>Process Data from Dirty to Clean</h4><p class="muted small">Data cleaning techniques using R.</p><a class="btn-outline" href="https://coursera.org/share/c54b73998a1c3683089ce53ad8bb6bae" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/analyze_data_to_answer_questions.jpg" alt="Analyze Data"><div class="cert-body"><h4>Analyze Data to Answer Questions</h4><p class="muted small">R & SQL for extracting insights.</p><a class="btn-outline" href="https://coursera.org/share/cfca6c878590cfc3e3cc0fc0e65d4ee7" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/Clean_data_in_sql_using_mysql_workbench.jpg" alt="Clean Data in SQL"><div class="cert-body"><h4>Clean Data in SQL using MySQL Workbench</h4><a class="btn-outline" href="https://coursera.org/share/a5a039b13f20a3b3163897da9a4be177" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/share_data_through_the_art_of_visualization.jpg" alt="Visualization"><div class="cert-body"><h4>Share Data Through the Art of Visualization</h4><a class="btn-outline" href="https://coursera.org/share/c9f245924af9c01eace97e8e89f26fea" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/data_analysis_with_R_programming.jpg" alt="Data Analysis with R"><div class="cert-body"><h4>Data Analysis with R Programming</h4><a class="btn-outline" href="https://coursera.org/share/de3e24cf2a87fe2a17af991cbbc43dbe" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/risk_management.jpg" alt="Risk Management"><div class="cert-body"><h4>Risk Management in Data Projects</h4><a class="btn-outline" href="https://coursera.org/share/334bf3a089f3d12315e4fc63f2ebe814" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/googlesheets.jpg" alt="Google Sheets"><div class="cert-body"><h4>Google Sheets for Data Analysis</h4><a class="btn-outline" href="https://coursera.org/share/24448ca1e1ab237a9ee47b7df9a3a73b" target="_blank">View Certificate</a></div></article>
-      <article class="cert-card"><img src="images/project_business_decision.jpg" alt="SQL to Inform Business Decision"><div class="cert-body"><h4>SQL to Inform a Business Decision</h4><a class="btn-outline" href="https://coursera.org/share/de63e9296436b17e9b9a643dde1c4243" target="_blank">View Certificate</a></div></article>
-    </div>
-  </section>
+/* PROJECTS */
+.projects-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.project-card {
+  background:var(--bg-glass);
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+  display:flex;
+  flex-direction:column;
+  transition: transform .22s, box-shadow .22s;
+}
+.project-media img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+.project-body { padding:16px; }
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow:0 28px 80px rgba(6,25,45,0.6);
+}
+.project-actions {
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.primary-sm {
+  background: linear-gradient(90deg,var(--accent),#7c3aed);
+  color:#041027;
+  padding:8px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+}
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section section-dark">
-    <h3 class="section-title light">Projects</h3>
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-media"><img src="images/Cyclistic bik presentation.png" alt="Cyclistic Bike Share Dashboard"></div>
-        <div class="project-body">
-          <h3>Cyclistic Bike Share Case Study</h3>
-          <p class="muted small">Capstone project — Rider segmentation & insights using R, Google Sheets, and Tableau.</p>
-          <div class="project-actions">
-            <a class="btn primary-sm" href="Cyclistic_bik_presentation_analysis_case_study.html" target="_blank">Open Case Study</a>
-            <a class="btn-outline" href="https://public.tableau.com/views/Cyclistic_Bike_Analysis/Dashboard1" target="_blank">Interactive Dashboard</a>
-          </div>
-        </div>
-      </article>
+/* CONTACT */
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+  margin-top:16px;
+}
+.contact-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  padding:16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+  text-align:center;
+}
 
-      <article class="project-card placeholder">
-        <div class="project-media empty"><div class="empty-label">Upcoming Projects</div></div>
-        <div class="project-body"><h3>More projects coming soon</h3><p class="muted small">Stay tuned for new case studies and dashboards.</p></div>
-      </article>
-    </div>
-  </section>
+/* FOOTER */
+.site-footer {
+  padding:18px;
+  text-align:center;
+  color:var(--text-light);
+  margin-top:18px;
+}
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="muted section-sub">Available for freelance & full-time opportunities.</p>
-      <div class="contact-grid">
-        <div class="contact-card"><h4>Email</h4><p><a class="inline-link" href="mailto:hamza@haouzmanianalytics.com">hamza@haouzmanianalytics.com</a></p></div>
-        <div class="contact-card"><h4>Phone</h4><p><a class="inline-link" href="tel:+213550714859">+213 550 714 859</a></p></div>
-        <div class="contact-card"><h4>LinkedIn</h4><p><a class="inline-link" href="https://www.linkedin.com/in/hamza-haouzmani" target="_blank">linkedin.com/in/hamza-haouzmani</a></p></div>
-        <div class="contact-card"><h4>GitHub</h4><p><a class="inline-link" href="https://github.com/HaouzDataHub" target="_blank">github.com/HaouzDataHub</a></p></div>
-      </div>
-    </div>
-  </section>
+/* UTILITIES */
+.muted { color:var(--muted-gray); font-size:13px; }
+.small { font-size:13px; }
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 HaouzDataHub — Built with care • Hamza Haouzmani</p>
-      <p class="muted small">Designed with Oswald & Inter fonts</p>
-    </div>
-  </footer>
+/* ANIMATIONS */
+.fade-in { opacity:0; transform:translateY(10px); animation:fadeIn 0.9s ease-out forwards; }
+@keyframes fadeIn { to { opacity:1; transform:none; } }
 
-  <!-- JAVASCRIPT -->
-  <script>
-    // Hide navbar on scroll down
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
+/* RESPONSIVE */
+@media (max-width:980px) {
+  .hero-wrap { grid-template-columns:1fr; gap:20px; padding:32px 14px; }
+  .profile-frame { width:180px; height:180px; margin:0 auto; }
+  .hero-title { font-size:1.3rem; text-align:center; }
+  .about-text { text-align:center; max-width:100%; }
+  .hero-actions { justify-content:center; }
+  .navbar { left:8px; right:8px; padding:10px 12px; margin:8px; }
+}
 
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+/* BACK TO TOP BUTTON */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 28px;
+  z-index: 100;
+  background: var(--accent);
+  color: #041027;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(56,189,248,0.2);
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#backToTop:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+}
 
-      if (currentScroll > lastScrollTop && currentScroll > 100) {
-        navbar.classList.add('hide');
-      } else {
-        navbar.classList.remove('hide');
-      }
+/* SKILL BADGES */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+.skill-badge {
+  background: rgba(56,189,248,0.1);
+  border: 1px solid rgba(56,189,248,0.2);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.skill-badge:hover {
+  background: var(--accent);
+  color: #041027;
+  box-shadow: 0 4px 12px rgba(56,189,248,0.25);
+}
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-  </script>
+/* CONTACT ICONS */
+.contact-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+.contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+.contact-icons a:hover {
+  background: var(--accent);
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+.contact-icons img {
+  width: 20px;
+  height: 20px;
+  filter: invert(85%);
+}
+.contact-icons a:hover img {
+  filter: invert(15%);
+}
 
-  <script>
-    // === PAGE LOADER ===
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        loader.classList.add('hide');
-        document.body.style.overflow = '';
-      }, 700);
-    });
+/* DARK / LIGHT MODE TOGGLE */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 26px;
+  z-index: 120;
+  background: var(--bg-glass);
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+#theme-toggle:hover {
+  background: var(--accent);
+  color: #041027;
+  transform: translateY(-3px);
+}
 
-    // === THEME TOGGLE ===
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      const isLight = document.body.classList.contains('light-mode');
-      toggleBtn.textContent = isLight ? '🌞' : '🌙';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
+/* LIGHT MODE COLORS */
+body.light-mode {
+  background: linear-gradient(180deg, #f6f8fa 0%, #e3e7ec 100%);
+  color: #1a1a1a;
+}
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+body.light-mode .section {
+  background: rgba(255, 255, 255, 0.7);
+}
+body.light-mode .btn-primary {
+  color: white;
+}
+body.light-mode .accent {
+  color: #007bff;
+}
 
-    // === KEEP THEME AFTER RELOAD ===
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      document.body.classList.add('light-mode');
-      toggleBtn.textContent = '🌞';
-    }
-  </script>
-</body>
-</html>
+/* PAGE LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-family: var(--font-alt);
+  font-weight: 600;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#loader .spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 18px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
