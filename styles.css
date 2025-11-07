@@ -227,3 +227,19 @@ body {
     padding-bottom: 50px;
   }
 }
+/* ===== NAVBAR AUTO HIDE ON SCROLL ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
