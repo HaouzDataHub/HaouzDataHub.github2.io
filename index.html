@@ -1,227 +1,149 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hamza Haouzmani — Data Analyst Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل بيانات — Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-
-  <meta name="description" content="Portfolio of Hamza Haouzmani — Junior Data Analyst. Skilled in data cleaning, dashboards, SQL, Excel, and analytics.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="assets/logo-purple-neo.svg" alt="Logo" class="logo" />
-        <div class="brand-text">
-          <h1>Hamza Haouzmani</h1>
-          <p class="sub">Junior Data Analyst</p>
-        </div>
-      </div>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">Data Analyst</div>
+            <ul class="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#skills">المهارات</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="https://your-cv-link.com" target="_blank">السيرة الذاتية (CV)</a></li>
+                <li><a href="#contact">الاتصال</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <nav class="nav">
-        <button class="nav-toggle" id="navToggle">☰</button>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="https://haouzdatahub.github.io" target="_blank">Resume (CV)</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h1 class="fade-in">اسمك — محلل بيانات</h1>
+            <p class="fade-in delay-1">
+                محلل بيانات محترف متخصص في تحويل البيانات المعقدة إلى رؤى قابلة للتنفيذ.  
+                أصمّم تحليلات عميقة، نماذج تنبؤية، ولوحات بيانات تساعد في اتخاذ قرارات أفضل.
+            </p>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h2>Turning Data Into Clear, Actionable Insights</h2>
-        <p class="lead">
-          Junior Data Analyst with a Google Data Analytics Certificate and strong hands-on experience in data cleaning,
-          dashboards, visualization, financial analysis, and KPI reporting. Passionate about transforming raw data into useful,
-          decision-driven insights.
-        </p>
-
-        <ul class="quick-meta">
-          <li><strong>Location:</strong> Batna, Algeria</li>
-          <li><strong>Email:</strong> <a href="mailto:hamza@haouzmanianalytics.com">hamza@haouzmanianalytics.com</a></li>
-          <li><strong>Phone:</strong> +213 550 714 859</li>
-        </ul>
-
-        <div class="hero-ctas">
-          <button class="btn primary" onclick="scrollToSection('projects')">View Projects</button>
-          <a class="btn ghost" href="https://haouzdatahub.github.io" target="_blank">Open Portfolio</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <img src="assets/hamza-avatar.png" alt="Hamza Avatar" class="avatar" />
-        <div class="summary-card">
-          <h3>Professional Summary</h3>
-          <p>
-            Detail-oriented Data Analyst with a solid foundation in business, finance, and project management.
-            Experienced in statistical analysis, dashboards, EDA, and building data-driven recommendations.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h3 class="section-title">Skills</h3>
-
-      <div class="skills-grid">
-        <div class="skill">Python</div>
-        <div class="skill">R (Basics)</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Tableau</div>
-        <div class="skill">Power Query</div>
-        <div class="skill">Excel (Advanced)</div>
-        <div class="skill">Data Cleaning</div>
-        <div class="skill">EDA</div>
-        <div class="skill">Data Visualization</div>
-        <div class="skill">Storytelling</div>
-      </div>
-
-      <div class="two-cols">
-        <div>
-          <h4>Professional Experience</h4>
-          
-          <ul class="experience-list">
-            <li>
-              <strong>Financial Market Analyst & Instructor</strong><br/>
-              Self-Employed | 2021 – Present
-              <p class="muted">
-                Advanced market analytics (ICT, Footprint, liquidity metrics). Built an educational platform (37,000+ followers),
-                analyzed large datasets, ensured transparent survey decision processes, and produced clear insights.
-              </p>
-            </li>
-
-            <li>
-              <strong>Wholesale & Distribution Manager</strong><br/>
-              Self-Employed | 2 years
-              <p class="muted">Analyzed sales & demand, optimized inventory workflows, and improved pricing & profitability.</p>
-            </li>
-
-            <li>
-              <strong>Construction Project Manager</strong><br/>
-              Self-Employed | 6 years
-              <p class="muted">Managed resources, budgets, schedules, and performance metrics across multiple projects.</p>
-            </li>
-          </ul>
+            <button class="cta-btn fade-in delay-2" onclick="scrollToSection('projects')">
+                استعرض مشاريعي
+            </button>
         </div>
 
-        <div>
-          <h4>Education</h4>
-          <ul class="education-list">
-            <li><strong>Google Data Analytics Professional Certificate</strong></li>
-            <li><strong>Certificate of Qualification in Construction Contracting</strong></li>
-          </ul>
-
-          <h4 class="mt-small">Languages</h4>
-          <p>Arabic (Native) — French (Fluent) — English (Intermediate)</p>
+        <div class="hero-img fade-in delay-3">
+            <img src="assets/data-analyst-icon.png" alt="Data Analyst Icon">
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS HUB -->
-  <section id="projects" class="section section-contrast">
-    <div class="container">
-      <h3 class="section-title">Projects Hub</h3>
-      <p class="muted">
-        A dynamic area where you can add: text, images, PDFs, GitHub repos, dashboards, or HTML demo links.
-      </p>
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">المهارات</h2>
 
-      <div id="projectsGrid" class="projects-grid">
-        <!-- Generated dynamically via script.js -->
-      </div>
+        <div class="skills-grid">
+            <span>Python</span>
+            <span>R</span>
+            <span>SQL</span>
+            <span>Tableau</span>
+            <span>Power BI</span>
+            <span>Excel (Advanced)</span>
+            <span>الإحصاء</span>
+            <span>تنظيف البيانات</span>
+            <span>Data Visualization</span>
+        </div>
+    </section>
 
-      <div class="projects-note">
-        <small>
-          To edit projects: open <code>script.js</code> and modify the <code>projects[]</code> array.
-        </small>
-      </div>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">المشاريع</h2>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="section">
-    <div class="container">
-      <h3 class="section-title">Certificates</h3>
+        <div class="projects-container">
 
-      <div id="certsGrid" class="certs-grid">
-        <!-- Loaded from script.js -->
-      </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>تحليل بيانات الدراجات - Cyclistic</h3>
+                <p>تحليل سلوك المستخدمين وتحديد الأنماط التي تؤثر على نمو الاشتراكات.</p>
 
-      <div class="projects-note">
-        <small>Add certificate thumbnails and links in <code>script.js</code>.</small>
-      </div>
-    </div>
-  </section>
+                <ul class="project-details">
+                    <li>Python — Pandas, Matplotlib</li>
+                    <li>Data Cleaning + EDA</li>
+                </ul>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section section-contrast">
-    <div class="container contact-grid">
-      <div class="contact-card">
-        <h3>Contact Me</h3>
+                <div class="project-buttons">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn-secondary">شرح المشروع</a>
+                </div>
+            </div>
 
-        <form id="contactForm" class="contact-form">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>لوحة مؤشرات لمؤشرات التنمية العالمية</h3>
+                <p>تصميم Dashboard تفاعلي لعرض مؤشرات التعليم والنمو الاقتصادي.</p>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                <ul class="project-details">
+                    <li>Tableau</li>
+                    <li>Data Modeling + KPI Design</li>
+                </ul>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <div class="project-buttons">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn-secondary">الشرح</a>
+                </div>
+            </div>
 
-          <button class="btn primary" type="submit">Send Message</button>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>نظام توصية ذكي للمنتجات</h3>
+                <p>بناء نموذج Machine Learning لتوصية المنتجات اعتماداً على سلوك المستخدم.</p>
+
+                <ul class="project-details">
+                    <li>Python — Scikit-Learn</li>
+                    <li>Modeling + Evaluation</li>
+                </ul>
+
+                <div class="project-buttons">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn-secondary">مقال الشرح</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">تواصل معي</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="الاسم الكامل" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea placeholder="اكتب رسالتك..." required></textarea>
+            <button type="submit" class="cta-btn">إرسال</button>
         </form>
-      </div>
 
-      <div class="contact-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hamza-haouzmani" target="_blank">View Profile</a></li>
-          <li><strong>GitHub Portfolio:</strong> <a href="https://haouzdatahub.github.io" target="_blank">Visit Site</a></li>
-          <li><strong>Email:</strong> <a href="mailto:hamza@haouzmanianalytics.com">Send Email</a></li>
-          <li><strong>Phone:</strong> +213 550 714 859</li>
-        </ul>
+        <div class="contact-icons">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="mailto:example@email.com">Email</a>
+        </div>
+    </section>
 
-        <h4 class="mt-small">Download Resume</h4>
-        <a class="btn ghost" href="assets/Hamza_Haouzmani_CV.pdf" download>Download CV (PDF)</a>
-      </div>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 — تصميم فاخر واحترافي، بواسطة محلل بيانات</p>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Hamza Haouzmani — Purple Neo Portfolio · GitHub Pages Optimized</p>
-    </div>
-  </footer>
-
-  <!-- MODAL -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">✕</button>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
