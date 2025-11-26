@@ -1,148 +1,412 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محلل بيانات — Portfolio</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <meta name="description" content="Hamza Haouzmani - Junior Data Analyst Portfolio. Transforming raw data into actionable insights.">
+    <title>Hamza Haouzmani | Data Analyst</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <nav class="nav-container">
-            <div class="logo">Data Analyst</div>
-            <ul class="nav-links">
-                <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="https://your-cv-link.com" target="_blank">السيرة الذاتية (CV)</a></li>
-                <li><a href="#contact">الاتصال</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">HH</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="assets/Hamza_Haouzmani_CV.pdf" class="nav-link nav-cv" target="_blank">Resume</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-text">
-            <h1 class="fade-in">اسمك — محلل بيانات</h1>
-            <p class="fade-in delay-1">
-                محلل بيانات محترف متخصص في تحويل البيانات المعقدة إلى رؤى قابلة للتنفيذ.  
-                أصمّم تحليلات عميقة، نماذج تنبؤية، ولوحات بيانات تساعد في اتخاذ قرارات أفضل.
-            </p>
-
-            <button class="cta-btn fade-in delay-2" onclick="scrollToSection('projects')">
-                استعرض مشاريعي
-            </button>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
+    </nav>
 
-        <div class="hero-img fade-in delay-3">
-            <img src="assets/data-analyst-icon.png" alt="Data Analyst Icon">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Data-Driven Decision Making</span>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hamza Haouzmani</span>
+                </h1>
+                <h2 class="hero-role">Junior Data Analyst</h2>
+                <p class="hero-description">
+                    Transforming raw data into actionable insights. Certified Google Data Analyst with expertise in 
+                    data cleaning, visualization, and statistical analysis. Bridging the gap between complex datasets 
+                    and strategic business decisions to drive organizational growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/in/hamza-haouzmani" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/haouzdatahub" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:hamza@haouzmanianalytics.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Visualization</span>
+                </div>
+                <div class="hero-circle"></div>
+            </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- Skills Section -->
     <section id="skills" class="skills">
-        <h2 class="section-title">المهارات</h2>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-description">Proficient in modern data analysis tools and methodologies</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Data Analysis -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Data Analysis</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">Exploratory Analysis</span>
+                        <span class="skill-tag">KPI Tracking</span>
+                        <span class="skill-tag">Reporting</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                        <span class="skill-tag">Trend Analysis</span>
+                    </div>
+                </div>
 
-        <div class="skills-grid">
-            <span>Python</span>
-            <span>R</span>
-            <span>SQL</span>
-            <span>Tableau</span>
-            <span>Power BI</span>
-            <span>Excel (Advanced)</span>
-            <span>الإحصاء</span>
-            <span>تنظيف البيانات</span>
-            <span>Data Visualization</span>
+                <!-- Tools & Technologies -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Excel (Advanced)</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">R Programming</span>
+                        <span class="skill-tag">Power Query</span>
+                        <span class="skill-tag">Python (Basics)</span>
+                    </div>
+                </div>
+
+                <!-- Visualization -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>Data Visualization</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Dashboards</span>
+                        <span class="skill-tag">Storytelling</span>
+                        <span class="skill-tag">Performance Metrics</span>
+                        <span class="skill-tag">Interactive Reports</span>
+                    </div>
+                </div>
+
+                <!-- Business Skills -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Acumen</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Financial Analysis</span>
+                        <span class="skill-tag">Operations Optimization</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2 class="section-title">المشاريع</h2>
-
-        <div class="projects-container">
-
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>تحليل بيانات الدراجات - Cyclistic</h3>
-                <p>تحليل سلوك المستخدمين وتحديد الأنماط التي تؤثر على نمو الاشتراكات.</p>
-
-                <ul class="project-details">
-                    <li>Python — Pandas, Matplotlib</li>
-                    <li>Data Cleaning + EDA</li>
-                </ul>
-
-                <div class="project-buttons">
-                    <a href="#" class="btn">GitHub</a>
-                    <a href="#" class="btn-secondary">شرح المشروع</a>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Featured Work</span>
+                <h2 class="section-title">Data Projects</h2>
+                <p class="section-description">Real-world case studies demonstrating analytical capabilities</p>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>لوحة مؤشرات لمؤشرات التنمية العالمية</h3>
-                <p>تصميم Dashboard تفاعلي لعرض مؤشرات التعليم والنمو الاقتصادي.</p>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <span class="project-badge">SQL · Excel · Dashboard</span>
+                    </div>
+                    <h3 class="project-title">MINT Classics Warehouse Analysis</h3>
+                    <p class="project-description">
+                        Comprehensive inventory data analysis assessing stock levels, category performance, and product movement. 
+                        Cleaned and transformed raw data using Excel and SQL, built an analytical dashboard highlighting KPIs 
+                        such as stock turnover and inventory aging.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Data cleaning & quality assurance</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>KPI dashboard development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Operational efficiency recommendations</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/haouzdatahub" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="https://haouzdatahub.github.io" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
 
-                <ul class="project-details">
-                    <li>Tableau</li>
-                    <li>Data Modeling + KPI Design</li>
-                </ul>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <span class="project-badge">R · Excel · Visualization</span>
+                    </div>
+                    <h3 class="project-title">Cyclistic Bike-Share Analysis</h3>
+                    <p class="project-description">
+                        Analyzed bike-share dataset to compare behavioral trends between casual riders and annual members. 
+                        Identified key insights related to peak usage hours, seasonal trends, and rider segmentation. 
+                        Created clear visualizations to communicate findings to stakeholders.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Behavioral trend analysis</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Statistical visualization in R</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Strategic growth recommendations</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/haouzdatahub" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="https://haouzdatahub.github.io/Cyclistic_bik_presentation_analysis_case_study.html" class="project-link" target="_blank">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Case Study</span>
+                        </a>
+                    </div>
+                </div>
 
-                <div class="project-buttons">
-                    <a href="#" class="btn">GitHub</a>
-                    <a href="#" class="btn-secondary">الشرح</a>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-area"></i>
+                        </div>
+                        <span class="project-badge">Tableau · Analytics</span>
+                    </div>
+                    <h3 class="project-title">Financial Market Performance Dashboard</h3>
+                    <p class="project-description">
+                        Built interactive Tableau dashboard analyzing financial market trends using advanced metrics 
+                        (ICT, footprint, liquidity). Managed and analyzed large datasets to support platform improvements 
+                        and deliver data-driven insights to 37,000+ followers.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced market analysis</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Interactive dashboard design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Large-scale data management</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/haouzdatahub" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="https://public.tableau.com" class="project-link" target="_blank">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span class="project-badge">Excel · SQL · Analysis</span>
+                    </div>
+                    <h3 class="project-title">Supply Chain Optimization Analysis</h3>
+                    <p class="project-description">
+                        Cleaned and analyzed sales and demand data to optimize inventory levels and supply chain performance. 
+                        Integrated financial analysis into pricing, purchasing, and profitability decisions, improving 
+                        operational workflow and partner satisfaction.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Demand forecasting</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Inventory optimization</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check"></i>
+                            <span>Financial integration</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/haouzdatahub" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="https://haouzdatahub.github.io" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Read More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>نظام توصية ذكي للمنتجات</h3>
-                <p>بناء نموذج Machine Learning لتوصية المنتجات اعتماداً على سلوك المستخدم.</p>
-
-                <ul class="project-details">
-                    <li>Python — Scikit-Learn</li>
-                    <li>Modeling + Evaluation</li>
-                </ul>
-
-                <div class="project-buttons">
-                    <a href="#" class="btn">GitHub</a>
-                    <a href="#" class="btn-secondary">مقال الشرح</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 class="section-title">تواصل معي</h2>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">Open to new opportunities and collaborations</p>
+            </div>
 
-        <form class="contact-form">
-            <input type="text" placeholder="الاسم الكامل" required>
-            <input type="email" placeholder="البريد الإلكتروني" required>
-            <textarea placeholder="اكتب رسالتك..." required></textarea>
-            <button type="submit" class="cta-btn">إرسال</button>
-        </form>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:hamza@haouzmanianalytics.com">hamza@haouzmanianalytics.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+213550714859">+213 550 714 859</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span>Batna 05000, Algeria</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://linkedin.com/in/hamza-haouzmani" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/haouzdatahub" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:hamza@haouzmanianalytics.com" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-icons">
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">GitHub</a>
-            <a href="mailto:example@email.com">Email</a>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 — تصميم فاخر واحترافي، بواسطة محلل بيانات</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Hamza Haouzmani. All rights reserved.</p>
+                <p class="footer-tagline">Designed with simplicity and precision</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
