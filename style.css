@@ -1,1 +1,224 @@
-body{font-family:Poppins;} /* Full CSS omitted for brevity */
+/* ===== Global Style ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    margin: 0 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0d47a1;
+}
+
+/* ===== Navigation ===== */
+header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #0d47a1;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background: #f8f9fb;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    background: #0d47a1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    background: #08306b;
+}
+
+/* ===== SKILLS ===== */
+.skills {
+    padding: 60px 10%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.skills-grid span {
+    padding: 12px;
+    background: #0d47a1;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.skills-grid span:hover {
+    background: #08306b;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+    padding: 60px 10%;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,.08);
+}
+
+.project-details {
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.project-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn, .btn-secondary {
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn {
+    background: #0d47a1;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #e3e3e3;
+    color: #000;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    padding: 60px 10%;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0d47a1;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
