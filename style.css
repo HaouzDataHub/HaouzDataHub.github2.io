@@ -1255,4 +1255,27 @@ a {
         padding: 0.6rem 1.2rem;
     }
 }
+/* ============================================
+   TikTok Button Special Styling
+   ============================================ */
+
+.hero-socials a[aria-label="TikTok"]:hover,
+.social-btn:has(.fa-tiktok):hover {
+    background: linear-gradient(135deg, #ff0050 0%, #00f2ea 100%);
+    color: #ffffff;
+    border-color: #ff0050;
+}
+
+/* Optional: TikTok icon animation */
+.hero-socials a[aria-label="TikTok"]:hover i,
+.social-btn:has(.fa-tiktok):hover i {
+    animation: tiktokShake 0.5s ease;
+}
+
+@keyframes tiktokShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
 
