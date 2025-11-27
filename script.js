@@ -331,6 +331,66 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+// ============================================
+// Timeline Cards Scroll Animation
+// ============================================
+
+function initTimelineAnimations() {
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add stagger delay for each card
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0) translateY(0)';
+                }, index * 150); // 150ms delay between each card
+                
+                // Unobserve after animation
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all timeline cards
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    
+    timelineCards.forEach((card, index) => {
+        // Set initial state
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(-50px) translateY(20px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        
+        // Start observing
+        timelineObserver.observe(card);
+    });
+    
+    // Animate story image on load
+    const storyImage = document.querySelector('.story-image');
+    if (storyImage) {
+        storyImage.style.opacity = '0';
+        storyImage.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            storyImage.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            storyImage.style.opacity = '1';
+            storyImage.style.transform = 'scale(1)';
+        }, 200);
+    }
+}
+
+// Call the function when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+    
+    // Add timeline animations
+    initTimelineAnimations();
+});
+
 
 // ============================================
 // Console Message
